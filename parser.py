@@ -48,7 +48,3 @@ def nickname(string):
 
 for j in range(len_file):
     print(f'Игрок {nickname(new_file[j])[1]} из гильдии {nickname(new_file[j])[0]} нанес {scounter(new_file[j])} по воротам')
-    #print(new_file[j][0])
-
-#print(new_file[3])
-#print(len_file)
