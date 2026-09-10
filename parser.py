@@ -36,7 +36,7 @@ def scounter(string):
     elif wep == 'Active':
         output = dmg * 1.5 * (1 + 0.15 * buf)
 
-    return output
+    return round(output, 2)
 
 def nickname(string):
     if string[0].count(']') == 1:
