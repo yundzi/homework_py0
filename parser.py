@@ -39,11 +39,18 @@ def scounter(string):
     return round(output, 2)
 
 def nickname(string):
-    if string[0].count(']') == 1:
-        guild, name = string[0][1::].split(']')
-        return guild, name
-    else:
-        return '0', string[0]
+    s = string[0]
+
+    if s[0] != '[':
+        return '0', s
+        
+    if string[0].count(']') >= 1:
+        guild, name = s[1:].split(']', 1)
+
+        if name[0] == ']':
+            return guild[1::], name[1::]
+        else:
+            return guild, name
 
 
 for j in range(len_file):
